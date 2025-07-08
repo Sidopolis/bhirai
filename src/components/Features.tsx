@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle, Eye, Shield, Zap, Users, Clock, BarChart3 } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 const features = [
   {
@@ -38,6 +39,10 @@ const Features = () => {
   return (
     <section id="features" className="py-20 bg-dark-900">
       <div className="max-w-3xl mx-auto px-6">
+        {/* Micro-story section with animated reveal */}
+        <ScrollReveal baseOpacity={0.15} enableBlur={true} baseRotation={2} blurStrength={6}>
+          Last year at a festival, panic spread before anyone realized. If BhīrAI had been there, the alert would have come before the rush. That's why we built it.
+        </ScrollReveal>
         <div className="text-center mb-16">
           <div className="inline-block bg-dark-800/80 px-4 py-2 rounded-full text-xs font-semibold tracking-widest text-blue-400 mb-4 uppercase">
             Core Advantages
