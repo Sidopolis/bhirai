@@ -39,14 +39,14 @@ const Features = () => {
     <section id="features" className="py-20 bg-dark-900">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-block bg-dark-800 px-4 py-2 rounded-full text-sm text-gray-400 mb-4">
-            What makes BhīrAI different
+          <div className="inline-block bg-dark-800/80 px-4 py-2 rounded-full text-xs font-semibold tracking-widest text-blue-400 mb-4 uppercase">
+            Core Advantages
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Six things that actually matter
+            What really sets BhīrAI apart
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            This isn't a marketing list. It's what I wish I'd had at every crowded event I cared about.
+            Not just features—these are the reasons BhīrAI is trusted by people who care about safety, speed, and real results.
           </p>
         </div>
 
