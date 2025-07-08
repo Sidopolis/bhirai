@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #111112;
+  /* Hoặc dùng màu bạn muốn, ví dụ #18181b */
+}
