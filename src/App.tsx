@@ -27,6 +27,11 @@ function App() {
   return (
     <BrowserRouter>
       <Navigation />
+      {window.location.pathname === '/' && (
+        <div className="w-full flex justify-end pr-10 mt-2">
+          <span className="text-xs text-gray-500 italic">Check out the demo to see how BhīrAI works.</span>
+        </div>
+      )}
       <Routes>
         <Route path="/" element={
           <>
