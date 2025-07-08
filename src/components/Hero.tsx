@@ -41,11 +41,11 @@ const Hero = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-dark-900 overflow-hidden">
       {/* MagnetLines animated background */}
       <MagnetLines
-        rows={24}
-        columns={24}
+        rows={12}
+        columns={12}
         containerSize="140%"
-        lineColor="#5227FF"
-        lineWidth="1.2px"
+        lineColor="#6b6bff"
+        lineWidth="3px"
         lineHeight="32px"
         baseAngle={0}
         className="opacity-40"
