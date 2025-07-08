@@ -5,8 +5,6 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import LiveWebcamDemo from './components/LiveWebcamDemo';
 import StoryPage from './components/StoryPage';
-import Technology from './components/Technology';
-import Features from './components/Features';
 
 function App() {
   // We'll keep track of the last alert from the Live Demo here
@@ -38,13 +36,16 @@ function App() {
         } />
         <Route path="/live" element={
           <>
-            <Hero />
-            <Technology />
-            <Features />
+            <LiveWebcamDemo />
             <Footer />
           </>
         } />
-        <Route path="/story" element={<StoryPage />} />
+        <Route path="/story" element={
+          <>
+            <StoryPage />
+            <Footer />
+          </>
+        } />
       </Routes>
     </BrowserRouter>
   );

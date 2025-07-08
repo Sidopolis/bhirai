@@ -21,7 +21,7 @@ const StoryPage = () => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-dark-900 flex flex-col items-center justify-center py-16 px-4">
+    <div className="min-h-screen bg-dark-900 flex flex-col items-center justify-center py-16 px-4 pt-24">
       <h1 className="text-3xl md:text-5xl font-bold text-white mb-10 text-center">Real Stories, Real Reasons</h1>
       <div className="flex flex-col gap-12 w-full max-w-2xl">
         {stories.map((story, idx) => (
