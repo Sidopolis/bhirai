@@ -112,15 +112,17 @@ const Navigation = () => {
                   <span className="relative z-10">FEATURES</span>
                   <div className="absolute inset-0 bg-dark-700/30 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                 </a>
-                <Link
-                  to="/story"
-                  className="text-gray-300 hover:text-white transition-all duration-200 text-xs font-semibold tracking-widest uppercase border-b-2 border-transparent hover:border-gray-400 py-1 relative group"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span className="relative z-10">STORY</span>
-                  <div className="absolute inset-0 bg-dark-700/30 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                </Link>
               </>
+            )}
+            {location.pathname === '/' && (
+              <Link
+                to="/story"
+                className="text-gray-300 hover:text-white transition-all duration-200 text-xs font-semibold tracking-widest uppercase border-b-2 border-transparent hover:border-gray-400 py-1 relative group"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="relative z-10">STORY</span>
+                <div className="absolute inset-0 bg-dark-700/30 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+              </Link>
             )}
             <Link
               to="/live"
@@ -139,6 +141,9 @@ const Navigation = () => {
               <Circle className="w-3 h-3 text-gray-400 mr-1 group-hover:animate-pulse transition-all duration-300" fill="#9ca3af" />
               <span className="group-hover:text-gray-300 transition-colors duration-300">Operational</span>
             </div>
+            {location.pathname === '/' && (
+              <span className="ml-8 text-xs text-gray-500 italic hidden md:inline-block">Check out the demo to see how BhīrAI works.</span>
+            )}
           </div>
 
           {/* Enhanced Mobile menu button */}
