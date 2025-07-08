@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import HowItWorks from './components/HowItWorks';
-import Features from './components/Features';
 import Footer from './components/Footer';
-import { Landmark, Users, Train, Megaphone, ShoppingCart, Music } from 'lucide-react';
 import LiveWebcamDemo from './components/LiveWebcamDemo';
+import StoryPage from './components/StoryPage';
 import Technology from './components/Technology';
+import Features from './components/Features';
 
 function App() {
   // We'll keep track of the last alert from the Live Demo here
@@ -34,12 +33,18 @@ function App() {
         <Route path="/" element={
           <>
             <Hero />
+            <Footer />
+          </>
+        } />
+        <Route path="/live" element={
+          <>
+            <Hero />
             <Technology />
             <Features />
             <Footer />
           </>
         } />
-        <Route path="/live" element={<LiveWebcamDemo />} />
+        <Route path="/story" element={<StoryPage />} />
       </Routes>
     </BrowserRouter>
   );

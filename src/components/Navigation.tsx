@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Shield, Circle } from 'lucide-react';
 import emailjs from 'emailjs-com';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showContact, setShowContact] = useState(false);
+
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,22 +94,34 @@ const Navigation = () => {
 
           {/* Enhanced Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 ml-auto">
-            <a
-              href="#technology"
-              className="text-gray-300 hover:text-white transition-all duration-200 text-xs font-semibold tracking-widest uppercase border-b-2 border-transparent hover:border-gray-400 py-1 relative group"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <span className="relative z-10">TECHNOLOGY</span>
-              <div className="absolute inset-0 bg-dark-700/30 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-            </a>
-            <a
-              href="#features"
-              className="text-gray-300 hover:text-white transition-all duration-200 text-xs font-semibold tracking-widest uppercase border-b-2 border-transparent hover:border-gray-400 py-1 relative group"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <span className="relative z-10">FEATURES</span>
-              <div className="absolute inset-0 bg-dark-700/30 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-            </a>
+            {location.pathname === '/live' && (
+              <>
+                <a
+                  href="#technology"
+                  className="text-gray-300 hover:text-white transition-all duration-200 text-xs font-semibold tracking-widest uppercase border-b-2 border-transparent hover:border-gray-400 py-1 relative group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="relative z-10">TECHNOLOGY</span>
+                  <div className="absolute inset-0 bg-dark-700/30 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                </a>
+                <a
+                  href="#features"
+                  className="text-gray-300 hover:text-white transition-all duration-200 text-xs font-semibold tracking-widest uppercase border-b-2 border-transparent hover:border-gray-400 py-1 relative group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="relative z-10">FEATURES</span>
+                  <div className="absolute inset-0 bg-dark-700/30 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                </a>
+                <Link
+                  to="/story"
+                  className="text-gray-300 hover:text-white transition-all duration-200 text-xs font-semibold tracking-widest uppercase border-b-2 border-transparent hover:border-gray-400 py-1 relative group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="relative z-10">STORY</span>
+                  <div className="absolute inset-0 bg-dark-700/30 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                </Link>
+              </>
+            )}
             <Link
               to="/live"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 border border-blue-500 hover:border-purple-500 ml-2"
