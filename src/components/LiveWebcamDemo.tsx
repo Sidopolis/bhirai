@@ -277,6 +277,10 @@ const LiveWebcamDemo: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-dark-900 py-12 px-4" style={{ minHeight: '100vh', marginTop: '6.5rem' }}>
+      {/* Development Status Banner */}
+      <div className="w-full max-w-xl mb-6 bg-dark-800 border border-yellow-600 text-yellow-300 text-sm rounded-lg px-6 py-3 text-center shadow-md">
+        <strong>Heads up!</strong> The Live AI Demo is still under active development. Things might change or break as we roll out new updates, but we’re working hard to make it better every day. Thanks for your patience!
+      </div>
       <div className="max-w-xl w-full bg-gradient-to-br from-dark-800 to-dark-900 rounded-2xl border border-dark-700 p-8 shadow-xl mb-8">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">Live AI Crowd Demo</h2>
         <p className="text-gray-400 mb-8 text-center">Experience real-time crowd analysis and safety alerting.</p>

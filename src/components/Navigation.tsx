@@ -85,9 +85,9 @@ const Navigation = () => {
           <div className="flex items-center space-x-2 group cursor-pointer">
             <Link to="/">
               <span className="block w-auto h-7">
-                <svg width="90" height="28" viewBox="0 0 90 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <text x="0" y="22" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="bold" fill="#e5e7eb" letter-spacing="2">BhīrAI</text>
-                </svg>
+                <span style={{ fontFamily: "'GT Planar', Arial, sans-serif", fontWeight: 400, fontSize: 28, color: '#e5e7eb', letterSpacing: '0.01em', textTransform: 'lowercase', lineHeight: 1 }}>
+                  bhīrai
+                </span>
               </span>
             </Link>
           </div>
@@ -141,9 +141,6 @@ const Navigation = () => {
               <Circle className="w-3 h-3 text-gray-400 mr-1 group-hover:animate-pulse transition-all duration-300" fill="#9ca3af" />
               <span className="group-hover:text-gray-300 transition-colors duration-300">Operational</span>
             </div>
-            {location.pathname === '/' && (
-              <span className="ml-8 text-xs text-gray-500 italic hidden md:inline-block">Check out the demo to see how BhīrAI works.</span>
-            )}
           </div>
 
           {/* Enhanced Mobile menu button */}

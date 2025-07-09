@@ -11,7 +11,7 @@ const HEADLINE_LANGUAGES = [
   { text: 'ভয় শুরু হওয়ার আগে দেখুন', lang: 'Bengali' },
   { text: 'பயம் தொடங்கும் முன் பாருங்கள்', lang: 'Tamil' },
   { text: 'ಭಯ ಆರಂಭವಾಗುವ ಮೊದಲು ನೋಡಿ', lang: 'Kannada' },
-  { text: 'ભય શરૂ થાય તે પહેલાં જુઓ', lang: 'Gujarati' },
+  { text: 'ભય ಶરૂ થાય તે પહેલાં જુઓ', lang: 'Gujarati' },
   { text: 'ਡਰ ਸ਼ੁਰੂ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਵੇਖੋ', lang: 'Punjabi' },
   { text: 'ഭയം തുടങ്ങുന്നതിന് മുമ്പ് കാണുക', lang: 'Malayalam' },
   { text: 'भीती सुरू होण्यापूर्वी पहा', lang: 'Marathi' },
@@ -72,6 +72,10 @@ const Hero = () => {
         <p className="text-lg md:text-2xl text-gray-400 text-center max-w-2xl mb-6">
           {SUBHEADING}
         </p>
+        {/* Info badge for demo */}
+        <div className="bg-dark-800/80 text-blue-400 text-sm rounded-full px-6 py-2 shadow-sm border border-blue-700 mb-6 text-center max-w-fit mx-auto">
+          Check out the demo to see how BhīrAI works.
+        </div>
         {/* Trusted by badge row */}
         <div className="flex items-center justify-center gap-4 mb-8 opacity-80">
           <span className="text-xs text-gray-500 mr-2">Trusted by:</span>

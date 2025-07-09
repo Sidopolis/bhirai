@@ -1,25 +1,50 @@
 import React from 'react';
-
-const badges = [
-  { name: 'Y Combinator', svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#FF6600"/><text x="12" y="17" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#fff">Y</text></svg> },
-  { name: 'Product Hunt', svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#DA552F"/><text x="12" y="17" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#fff">P</text></svg> },
-  { name: 'Indie Hackers', svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#1A2B34"/><text x="12" y="17" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#fff">IH</text></svg> },
-];
+import { Link } from 'react-router-dom';
 
 const Footer = () => (
-  <footer className="w-full py-10 bg-dark-900 border-t border-dark-700 text-center text-gray-500 text-sm flex flex-col items-center gap-3">
-    <div className="w-12 h-px bg-dark-700 mb-2" />
-    <div className="mb-2 flex flex-col items-center gap-1">
-      <span className="font-bold tracking-widest text-gray-300 text-lg">BhīrAI</span>
-      <span className="text-xs text-gray-400">For every crowd, for every person.<br/>Built by real people who care about safety, not hype.</span>
+  <footer className="w-full bg-dark-900 border-t border-dark-700 text-gray-300 pt-12 pb-6">
+    <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+      {/* Left: Brand & Mission */}
+      <div className="flex flex-col gap-2">
+        <span className="font-bold text-lg" style={{ fontFamily: "'GT Planar', Arial, sans-serif" }}>BhīrAI</span>
+        <span className="text-xs text-gray-400">
+          Crowd safety, reimagined.<br />
+          Built by real people for real peace of mind.
+        </span>
+        <span className="text-xs text-gray-500 mt-2">Serving safety worldwide</span>
+      </div>
+      {/* Middle: Navigation */}
+      <div className="flex flex-col gap-1 md:items-center">
+        <Link to="/story" className="hover:text-blue-400 transition">Story</Link>
+        <Link to="/live" className="hover:text-blue-400 transition">Live AI Demo</Link>
+        <a href="mailto:hello@bhirai.com" className="hover:text-blue-400 transition">Contact</a>
+      </div>
+      {/* Right: Homepage */}
+      <div className="flex flex-col gap-1 md:items-end">
+        <Link to="/" className="hover:text-blue-400 transition">Homepage</Link>
+      </div>
     </div>
-    <div className="flex items-center gap-4 mt-2 mb-1 opacity-80">
-      <span className="text-xs text-gray-500 mr-2">Trusted by:</span>
-      {badges.map(badge => (
-        <span key={badge.name} title={badge.name} className="inline-block align-middle">{badge.svg}</span>
-      ))}
+    {/* Divider */}
+    <div className="w-full h-px bg-dark-700 my-6" />
+    {/* Bottom: Copyright, Policies */}
+    <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="flex flex-col md:flex-row items-center gap-2 text-xs text-gray-500">
+        <span>© 2025 BhīrAI. All rights reserved</span>
+        <span className="hidden md:inline">•</span>
+        <a href="#" className="hover:text-blue-400 transition">Privacy Policy</a>
+        <span className="hidden md:inline">•</span>
+        <a href="#" className="hover:text-blue-400 transition">Cookies Policy</a>
+      </div>
     </div>
-    <div className="text-xs text-gray-600 mt-2">© 2024 BhīrAI. All rights reserved.</div>
+    {/* Large Logo */}
+    <div className="w-full flex justify-center mt-8 overflow-hidden" style={{height: '90px', maxHeight: '18vw'}}>
+      <span
+        className="text-[80px] md:text-[140px] font-bold text-gray-500 select-none"
+        style={{ fontFamily: "'GT Planar', Arial, sans-serif", letterSpacing: '0.01em', lineHeight: 1, textTransform: 'lowercase', display: 'block', marginBottom: '-0.18em' }}
+      >
+        bhīrai
+      </span>
+    </div>
   </footer>
 );
 

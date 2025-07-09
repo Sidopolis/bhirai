@@ -6,3 +6,11 @@ html, body {
   background-color: #111112;
   /* Hoặc dùng màu bạn muốn, ví dụ #18181b */
 }
+
+@font-face {
+  font-family: 'GT Planar';
+  src: url('/fonts/GT-Planar-Bold-Trial-BF63bcd77557486.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
