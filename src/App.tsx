@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import LiveWebcamDemo from './components/LiveWebcamDemo';
 import StoryPage from './components/StoryPage';
+import HowItWorks from './components/HowItWorks';
+import Logo from './components/Logo';
 
 function AppContent() {
   const [lastAlert, setLastAlert] = useState<string | null>(null);
@@ -46,6 +48,12 @@ function AppContent() {
             <Footer />
           </>
         } />
+        <Route path="/how" element={
+          <>
+            <HowItWorks />
+            <Footer />
+          </>
+        } />
       </Routes>
     </>
   );
@@ -55,6 +63,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppContent />
+      {/* Removed the big, cropped logo at the bottom of the page */}
     </BrowserRouter>
   );
 }
