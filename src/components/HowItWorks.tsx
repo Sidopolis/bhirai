@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const steps = [
   {
-    title: '1. Start BhīrAI',
-    description: 'Open the app and allow camera access. BhīrAI is ready instantly—no setup, no waiting.'
+    title: '1. Start Bhīr.ai',
+    description: 'Open the app and allow camera access. Bhīr.ai is ready instantly—no setup, no waiting.'
   },
   {
     title: '2. Real-Time Crowd Analysis',
@@ -25,7 +25,7 @@ const HowItWorks = () => {
     <section id="how-it-works" className="py-24 bg-black text-gray-200">
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-6xl font-extrabold mb-12 leading-tight" style={{ fontFamily: "'GT Planar', Arial, sans-serif" }}>
-          How BhīrAI Works
+          How Bhīr.AI Works
         </h1>
         <div className="space-y-12 mb-20">
           {steps.map((step, idx) => (
