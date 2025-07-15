@@ -79,7 +79,6 @@ const Hero = () => {
         {/* Trusted by badge row */}
         <div className="flex items-center justify-center gap-4 mb-8 opacity-80">
           <span className="text-xs text-gray-500 mr-2">Trusted by:</span>
-          <span title="Y Combinator" className="inline-block align-middle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#FF6600"/><text x="12" y="17" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#fff">Y</text></svg></span>
           <span title="Product Hunt" className="inline-block align-middle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#DA552F"/><text x="12" y="17" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#fff">P</text></svg></span>
           <span title="Indie Hackers" className="inline-block align-middle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#1A2B34"/><text x="12" y="17" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#fff">IH</text></svg></span>
         </div>
